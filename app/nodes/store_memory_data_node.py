@@ -4,6 +4,8 @@ from app.agents.memory_manager_agent import memory_manager_agent
 from app.prompts.memory_manager_agent_prompt import memory_agent_template
 from app.state.state import EmailAgentState
 from app.agents.memory_manager_agent import memory_manager_agent 
+from app.database.connection import get_session
+from app.database.utils import save_sent_email, save_received_email
 
 def store_memory_and_data_node(state: EmailAgentState, config: RunnableConfig):
     """

@@ -2,6 +2,7 @@ import types
 from langchain_groq import ChatGroq
 from langmem import create_memory_store_manager
 from app.schemas.memory_agent_schema import EmailMemory
+from app.agent_memory_store import memory_store
 import os
 from app.core.config import settings
 
@@ -45,11 +46,12 @@ def patch_groq_for_extractions(model: ChatGroq):
 model=ChatGroq(model="openai/gpt-oss-20b", temperature=0.2)
 model = patch_groq_for_extractions(model)
 
+namespace = ("emails", "{user_id}", "collection")
 memory_manager_agent = create_memory_store_manager(
     model, 
     schemas=[EmailMemory],
     namespace=namespace,
-    store=p_store,
+    store=memory_store,
     instructions="Extract required info from incoming mail and its reply .",
     enable_inserts=True,
     enable_deletes=True,

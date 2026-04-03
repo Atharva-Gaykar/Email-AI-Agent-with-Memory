@@ -1,7 +1,7 @@
 from psycopg_pool import ConnectionPool
 from langgraph.store.postgres import PostgresStore
 from langgraph.checkpoint.postgres import PostgresSaver
-from app.memory_store.embeddings import remote_embeddings
+from app.agent_memory_store.embeddings import remote_embeddings
 
 from app.core.config import settings
 
@@ -14,5 +14,7 @@ pool = ConnectionPool(
     max_size=10,
     kwargs={"autocommit": True} 
 )
+4
+
 
 memory_store = PostgresStore(pool, index={"dims": 384, "embed": remote_embeddings})

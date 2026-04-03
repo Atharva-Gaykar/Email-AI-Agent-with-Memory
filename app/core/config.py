@@ -12,6 +12,11 @@ class Settings(BaseSettings):
     CLOUDINARY_CLOUD_NAME: str
     CLOUDINARY_API_KEY: str
     CLOUDINARY_API_SECRET: str
+
+    
+    DB_URL_FOR_CHECKPOINTER_STORE: str
+
+    DB_URL_FOR_SQL_AL:str
  
     model_config = SettingsConfigDict(
         env_file=str(BASE_DIR / ".env"),
@@ -20,3 +25,5 @@ class Settings(BaseSettings):
     )
  
 settings = Settings()
+
+
