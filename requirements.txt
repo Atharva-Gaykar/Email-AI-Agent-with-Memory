@@ -6,3 +6,6 @@ fastapi==0.118.1
 uvicorn
 langmem
 SQLAlchemy==2.0.41
+google-auth==2.49.1
+langgraph-checkpoint-postgres
+psycopg[binary,pool]
