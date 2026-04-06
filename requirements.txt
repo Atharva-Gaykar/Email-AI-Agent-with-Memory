@@ -1,10 +1,11 @@
 langchain==1.2.10
+langgraph==1.0.9
 pydantic==2.11.7
 langchain_huggingface
 langchain-groq==1.1.1
 fastapi==0.118.1
 uvicorn
-langmem
+langmem==0.0.30
 SQLAlchemy==2.0.41
 google-auth==2.49.1
 langgraph-checkpoint-postgres
