@@ -1,5 +1,5 @@
-langchain==1.2.10
-langgraph==1.0.9
+langchain==1.2.15
+langgraph==1.1.6
 pydantic==2.11.7
 langchain_huggingface
 langchain-groq==1.1.1
