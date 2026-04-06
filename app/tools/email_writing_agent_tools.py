@@ -33,7 +33,7 @@ def create_gmail_draft(to: str, subject: str, body: str):
         })
 
         draft_id=reply.split(":")[1].strip()
-        return f"Successfully created draft : <id>{draft_id}</id> <subject>{subject}</subject> <body>{body}</body>"
+        return f"Successfully created draft : <id>{draft_id}</id> <subject>{subject}</subject> <body>{body}</body> take user permission before submitting"
     
     else:
         # Get the feedback from the user response
