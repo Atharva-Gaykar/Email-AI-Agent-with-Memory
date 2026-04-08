@@ -19,6 +19,10 @@ from app.tools.email_writing_agent_tools import email_writing_agent_tools
 from IPython.display import Image, display
 from app.persistance.memory_store_checkpointer_config import memory_store, checkpointer
 from langchain_google_community import GmailToolkit
+from app.database.connection import pool
+from app.utils.embeddings import remote_embeddings
+from langgraph.checkpoint.postgres import PostgresSaver
+from langgraph.store.postgres import PostgresStore
 
 # Define a standard retry policy for database-heavy nodes
 db_retry_policy = RetryPolicy(
@@ -134,6 +138,7 @@ builder.add_edge("archive_node", END)
 
 
 toolkit = GmailToolkit()
+
 
 
 graph=builder.compile(checkpointer=checkpointer, store=memory_store)

@@ -29,11 +29,4 @@ SessionLocal = sessionmaker(bind=engine, autoflush=False, autocommit=False)
 def get_session() -> Session:
     return SessionLocal()
 
-DB_URL_FOR_CHECKPOINTER_STORE=settings.DB_URL_FOR_CHECKPOINTER_STORE
 
-pool = ConnectionPool(
-    conninfo=DB_URL_FOR_CHECKPOINTER_STORE, 
-    min_size=1, 
-    max_size=10,
-    kwargs={"autocommit": True,"row_factory": dict} 
-)
