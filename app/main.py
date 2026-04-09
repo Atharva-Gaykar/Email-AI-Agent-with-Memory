@@ -3,9 +3,10 @@ from psycopg import OperationalError
 from app.graph import graph
 from app.state.state import EmailAgentState
 from app.database.connection import pool
+import uuid
 
 
-config = {"configurable": {"thread_id": "user_abc_123"}}
+config = {"configurable": {"thread_id": str(uuid.uuid4()), "user_id": "1"}}
 
 input_data: EmailAgentState = {
     "user_email_id": "gaykaratharva7@gmail.com",

@@ -141,7 +141,7 @@ toolkit = GmailToolkit()
 
 
 
-graph=builder.compile(checkpointer=checkpointer, store=memory_store)
+graph=builder.compile(checkpointer=checkpointer, store=memory_store,debug=True)
 
 
 
