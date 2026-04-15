@@ -13,3 +13,4 @@ psycopg[binary]
 psycopg-pool
 transformers
 pydantic-settings
+email-validator
