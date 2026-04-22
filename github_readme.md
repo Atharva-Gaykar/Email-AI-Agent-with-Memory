@@ -49,6 +49,13 @@ Advanced implementations include:
   <img src="https://github.com/user-attachments/assets/5d17b94a-200d-437f-b1c6-83558359d963" width="700"/>
 </p>
 
+<p align="center">
+<em>LangGraph workflow showing safety checks, memory retrieval, drafting, interrupts, and persistence.</em>
+</p>
+
+The system orchestrates specialized agents across the full email lifecycle.
+
+---
 
 ### Triage Agent
 
@@ -139,13 +146,16 @@ final_state = graph.invoke(payload, config=config)
 Safety classification is powered by a hybrid model.
 
 ### Model
+
 - DistilBERT text embeddings  
 - XGBoost URL numerical features
 
 ### Performance
+
 **99.35% test accuracy**
 
 ### Protection
+
 Detects:
 
 - Phishing attempts  
@@ -176,11 +186,7 @@ Repository:
 
 ---
 
-## 🔄 Graph Architecture
-
-*(Add LangGraph workflow diagram here)*
-
-## Workflow Nodes
+## 🔄 Workflow Nodes
 
 ### `safety_check_node`
 Identifies phishing or unsafe content.
