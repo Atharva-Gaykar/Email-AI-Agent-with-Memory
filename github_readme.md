@@ -43,7 +43,12 @@ Advanced implementations include:
 
 ## 🤖 Advanced Multi-Agent Architecture
 
-The system orchestrates specialized agents across the full email lifecycle.
+### Graph Workflow Diagram
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/5d17b94a-200d-437f-b1c6-83558359d963" width="700"/>
+</p>
+
 
 ### Triage Agent
 
